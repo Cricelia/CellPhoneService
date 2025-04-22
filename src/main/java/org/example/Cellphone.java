@@ -7,11 +7,12 @@ public class Cellphone {
     private String phoneNumber;
     private String owner;
 
-    public Cellphone(String serialNumber, String model, String phoneNumber, String owner) {
-        this.serialNumber = "0";
-        this.model = " ";
-        this.phoneNumber = " ";
-        this.owner = " ";
+    public Cellphone(String serialNumber, String model, String carrier, String phoneNumber, String owner) {
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier ;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
     }
 
     public String getSerialNumber() {
@@ -52,6 +53,10 @@ public class Cellphone {
 
     public void setOwner(String owner) {
         this.owner = owner;
+    }
+    public void dial(String phoneNumber) {
+
+        System.out.println(owner + "'s phone is calling " + this.phoneNumber);
     }
 }
 

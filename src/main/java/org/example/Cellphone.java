@@ -10,7 +10,14 @@ public class Cellphone {
     public Cellphone(String serialNumber, String model, String carrier, String phoneNumber, String owner) {
         this.serialNumber = serialNumber;
         this.model = model;
-        this.carrier = carrier ;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
+    public Cellphone(int serialNumber, String model, String carrier, String phoneNumber, String owner) {
+        this.serialNumber = String.valueOf(serialNumber);
+        this.model = model;
+        this.carrier = carrier;
         this.phoneNumber = phoneNumber;
         this.owner = owner;
     }
@@ -54,6 +61,7 @@ public class Cellphone {
     public void setOwner(String owner) {
         this.owner = owner;
     }
+
     public void dial(String phoneNumber) {
 
         System.out.println(owner + "'s phone is calling " + this.phoneNumber);

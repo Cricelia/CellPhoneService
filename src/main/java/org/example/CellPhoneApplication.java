@@ -9,6 +9,8 @@ public class CellPhoneApplication {
         Cellphone phone = new Cellphone("54555169", "Galaxy 22", "AT&T", "800-145-2145", "Greg");
         Cellphone phone1 = new Cellphone("2637418", "Galaxy 1", "T-mobile", "800-540-3718", "Sandy");
 
+        Cellphone phone2 = new Cellphone(10220205, "Galaxy21", "AT&T", "800-136-1520", "Philip");
+
        /* System.out.println("Please answer the questions below");
         System.out.println("What is the serial number? ");
         String serialNumber = asking.nextLine();
@@ -28,23 +30,23 @@ public class CellPhoneApplication {
 
 
 
-        display(phone, phone1);
-        display(phone1, phone1);
+        display(phone);
+        display(phone1);
+        display(phone2);
 
         phone.dial(phone1.getPhoneNumber());
         phone1.dial( phone.getPhoneNumber() );
-
-
+        phone2.dial(phone.getPhoneNumber());
 
     }
-        public static void display(Cellphone phone, Cellphone phone1) {
+        public static void display(Cellphone cellphone) {
 
 
-            System.out.println("Serial Number: " + phone.getSerialNumber());
-            System.out.println("Model: " + phone.getModel());
-            System.out.println("Carrier: " + phone.getCarrier());
-            System.out.println("Phone #: " + phone.getPhoneNumber());
-            System.out.println("Owner: " + phone.getOwner());
+            System.out.println("Serial Number: " + cellphone.getSerialNumber());
+            System.out.println("Model: " + cellphone.getModel());
+            System.out.println("Carrier: " + cellphone.getCarrier());
+            System.out.println("Phone #: " + cellphone.getPhoneNumber());
+            System.out.println("Owner: " + cellphone.getOwner());
 
         }
 
